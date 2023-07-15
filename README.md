@@ -2,13 +2,13 @@
 Stock Market Prediction Application  "StockSee"
 This project aims to predict stock market prices using a combination of LSTM (Long Short-Term Memory) and Conv1D (1-D Convolutional Neural Network) models. The project utilizes historical stock market data to train the models and evaluate their performance.
 
-Dataset
+##Dataset
 The dataset used for this project is sourced from Yfinance API. The dataset contains information about the daily stock prices of a company, including open price, low price, high price, volume, and closing price. The dataset is pre-processed and features such as the 5-day moving average difference (dma) and a binary indicator for positive dma (dma_positive) are added..The dataset is then split into training and testing sets.
 
-Application
+##Application
 The functionalities provided by the application includ plotting 5-Day trend of any user defined stock, plotting 100 day moving average and 200 day moving average against the close price of any stock, providing a chart that precisely presents the performance accuracy of the LSTM model and also a 10-year data of the mentioned stock. Moreover, with the help of Streamlit framework an elaborate web application is created for user to interact with where the user can enter a stock ticker and get the analysis of the stock. 
 
-Dependencies
+##Dependencies
 Make sure you have the following dependencies installed:
 
 Streamlit
@@ -22,13 +22,13 @@ You can install these dependencies using pip:
 
 pip install pandas numpy matplotlib scikit-learn keras tensorflow streamlit yfinance
 
-Usage
+##Usage
 Clone the repository and navigate to the project directory.
 Run the LSTM.ipynb notebook, this will train model with 'ADOBE' stock data. The notebook/script will load the dataset, preprocess the data, train the models, and generate predictions. The predictions are then compared with the actual stock prices, and the results are displayed in a plot.
 execute the application.py script.
 This will present an elaborate web-page with the neccesary data about ^NSEI(Nifty 50) stock by default, which ofcourse can be change through user input.
 
-Results
+##Results
 The performance of the models is evaluated using the R-squared (r2) metric, which measures the proportion of the variance in the target variable that is predictable from the input variables. The R-squared values are printed after training the models.
 
 The plot generated after training and testing the models shows the predicted stock prices compared to the actual stock prices for both the training and testing datasets.
@@ -118,5 +118,5 @@ The plot generated after training and testing the models shows the predicted sto
 
 These results demonstrate the effectiveness of the LSTM and Conv1D models in predicting stock market prices based on the provided dataset.
 
-Contributing
+##Contributing
 Contributions to this project are welcome. If you find any issues or have suggestions for improvement, please open an issue or submit a pull request.
