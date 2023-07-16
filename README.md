@@ -1,4 +1,6 @@
 # LSTM-Stock-Price-Prediction-WEB-App-with-Streamlit-Stocksee
+# Try the finished web app here- (https://stocksee.streamlit.app/)
+
 **Stock Market Prediction Application  "StockSee"**
 This project aims to predict stock market prices using a combination of **LSTM (Long Short-Term Memory)** and **Conv1D (1-D Convolutional Neural Network)** models. The application takes user input in the form of ticker symbol of a stock and presents the performance of the stock in the form of both tables and graphs. The project utilize historical stock market data to train the models and evaluate their performance, the trained model furhter runs for different data inputs through an application.
 
