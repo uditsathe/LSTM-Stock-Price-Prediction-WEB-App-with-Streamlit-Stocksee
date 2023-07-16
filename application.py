@@ -96,7 +96,7 @@ X['close'] = y
 X_train, y_train, X_test, y_test = load_data(X, window)
 #loading model and testing it with test data
 model = load_model(
-    '\keras_newModel.h5')
+    'keras_newModel.h5')
 trainPredict = model.predict(X_train)
 testPredict = model.predict(X_test)
 trainPredict = scaler.inverse_transform(trainPredict)
