@@ -17,15 +17,14 @@ st.title("Stock Price Predictor")
 Ticker = st.text_input("Enter Stock Ticker", '^NSEI')
 # ^NSEI is set as default input
 
-
+frame = yf.Ticker(Ticker)
 while True:
     try:
-        frame = yf.Ticker(Ticker)
+        company = frame.info['longName']
         break
     except HTTPError:
         st.subheader("Entered Ticker value is invalid.  Try again...")
 # tickName = yf.Ticker(Ticker)
-company = frame.info['longName']
 data = frame.history(period="max")
 data = data.tail(2520)
 data10Year = data
