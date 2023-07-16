@@ -22,7 +22,7 @@ while True:
     try:
         company = frame.info['longName']
         break
-    except Error:
+    except:
         st.subheader("Entered Ticker value is invalid.  Try again...")
 # tickName = yf.Ticker(Ticker)
 data = frame.history(period="max")
