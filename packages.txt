@@ -1,8 +1,0 @@
-numpy-dev
-pandas-dev
-tensorflow-dev
-scikit-learn-dev
-yfinance-dev
-matplotlib-dev
-streamlit-dev
-keras-dev
