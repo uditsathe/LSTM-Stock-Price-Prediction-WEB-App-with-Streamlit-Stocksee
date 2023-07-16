@@ -24,6 +24,7 @@ while True:
         break
     except:
         st.subheader("Entered Ticker value is invalid.  Try again...")
+        quit()
 # tickName = yf.Ticker(Ticker)
 data = frame.history(period="max")
 data = data.tail(2520)
