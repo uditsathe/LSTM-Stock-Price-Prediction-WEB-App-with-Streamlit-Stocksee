@@ -19,7 +19,7 @@ Ticker = st.text_input("Enter Stock Ticker", '^NSEI')
 
 frame = yf.Ticker(Ticker)
 tickName = yf.Ticker(Ticker)
-company = tickName.info['longName']
+company = frame.info['longName']
 data = frame.history(period="max")
 data = data.tail(2520)
 data10Year = data
