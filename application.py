@@ -26,8 +26,8 @@ while True:
         quit()
 # tickName = yf.Ticker(Ticker)
 data = frame.history(period="max")
-st.subheader("Last Open: "+data['Open'].iloc[-1])
-st.subheader("Last Close: "+data['Close'].iloc[-1]) 
+st.subheader("Last Open: "+str(data['Open'].iloc[-1]))
+st.subheader("Last Close: "+str(data['Close'].iloc[-1])) 
 data = data.tail(2520)
 data10Year = data
 data.dropna(axis=0, inplace=True)
