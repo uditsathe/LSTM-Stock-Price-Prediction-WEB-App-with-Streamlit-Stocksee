@@ -42,7 +42,7 @@ ma100 = data.Close.rolling(100).mean()
 ma200 = data.Close.rolling(200).mean()
 
 #now plotting 100 day moving average
-fig100ma , bx= plt.subplots(figsize=(14, 8))
+fig100ma , bx= plt.subplots()
 bx.plot(ma100.tail(300), color='blue', label='100 DMA')
 bx.plot(data.tail(300).Close, color='black', label='Close')
 bx.legend(loc='upper left')
