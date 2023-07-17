@@ -11,10 +11,9 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 import streamlit as st
 
-st.markdown("___")
 st.markdown("<h1 style='text-align: center; color: red;'>StockSee</h1>", unsafe_allow_html=True)
 st.title("Stock Price Predictor")
-Ticker = st.text_input("Enter Stock Ticker", '^NSEI')
+Ticker = st.text_input("Enter Stock Ticker    Don't know the stock ticker of a company? Find them here [StockAnalysis](https://stockanalysis.com/stocks/)", '^NSEI')
 # ^NSEI is set as default input
 
 frame = yf.Ticker(Ticker)
@@ -27,6 +26,8 @@ while True:
         quit()
 # tickName = yf.Ticker(Ticker)
 data = frame.history(period="max")
+st.subheader("Last Open: "+data.tail(1).Open)
+st.subheader("Last Close: "+data.tail(1).Close) 
 data = data.tail(2520)
 data10Year = data
 data.dropna(axis=0, inplace=True)
