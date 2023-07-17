@@ -13,7 +13,8 @@ import streamlit as st
 
 st.markdown("<h1 style='text-align: center; color: red;'>StockSee</h1>", unsafe_allow_html=True)
 st.title("Stock Price Predictor")
-Ticker = st.text_input("Enter Stock Ticker    Don't know the stock ticker of a company? Find them here [StockAnalysis](https://stockanalysis.com/stocks/)", '^NSEI')
+Ticker = st.text_input("Enter Stock Ticker", '^NSEI')
+st.caption("Don't know the stock ticker of a company? Find them here [StockAnalysis](https://stockanalysis.com/stocks/)")
 # ^NSEI is set as default input
 
 frame = yf.Ticker(Ticker)
@@ -25,9 +26,10 @@ while True:
         st.subheader("Entered Ticker value is invalid.  Try again...")
         quit()
 # tickName = yf.Ticker(Ticker)
+currency=frame.info['currency']
 data = frame.history(period="max")
-st.subheader("Last Open: "+str(data['Open'].iloc[-1]))
-st.subheader("Last Close: "+str(data['Close'].iloc[-1])) 
+st.subheader("Last Open: "+currency+" "+str(data['Open'].iloc[-1]))
+st.subheader("Last Close: "+currency+" "+str(data['Close'].iloc[-1])) 
 data = data.tail(2520)
 data10Year = data
 data.dropna(axis=0, inplace=True)
