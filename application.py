@@ -141,6 +141,6 @@ st.pyplot(figPredict)
 st.markdown("___")
 
 #added social media handles section of the page
-st.write("GitHub [link](https://github.com/uditsathe/uditsathe.github.io)", " | ", "LinkedIn [link](https://in.linkedin.com/in/udit-sathe-b00154214?original_referer=https%3A%2F%2Fwww.google.com%2F)")
-
+st.write("GitHub [link](https://github.com/uditsathe/uditsathe.github.io)", " | ", "LinkedIn [link](https://in.linkedin.com/in/udit-sathe-b00154214?original_referer=https%3A%2F%2Fwww.google.com%2F)", " | ",
+         "Twitter [link](https://twitter.com/SatheUdit)", " | ", "Instagram [link](https://www.instagram.com/uditsathe/)")
 
