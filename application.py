@@ -20,7 +20,7 @@ st.caption("Don't know the stock ticker of a company? Find them here [StockAnaly
 frame = yf.Ticker(Ticker)
 while True:
     try:
-        company = frame.info['longName']
+        company = frame.info['name']
         break
     except:
         st.subheader("Entered Ticker value is invalid.  Try again...")
