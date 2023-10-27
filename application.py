@@ -13,14 +13,14 @@ import streamlit as st
 
 st.markdown("<h1 style='text-align: center; color: red;'>StockSee</h1>", unsafe_allow_html=True)
 st.title("Stock Price Predictor")
-Ticker = st.text_input("Enter Stock Ticker", '^NSEI')
+thisTicker = st.text_input("Enter Stock Ticker", '^NSEI')
 st.caption("Don't know the stock ticker of a company? Find them here [StockAnalysis](https://stockanalysis.com/stocks/)")
 # ^NSEI is set as default input
 
-frame = yf.Ticker(Ticker)
+frame = yf.Ticker(thisTicker)
 while True:
     try:
-        company = frame.info['longName']
+        company = frame.info['shortName']
         break
     except:
         st.subheader("Entered Ticker value is invalid.  Try again...")
@@ -141,6 +141,5 @@ st.pyplot(figPredict)
 st.markdown("___")
 
 #added social media handles section of the page
-st.write("GitHub [link](https://github.com/uditsathe/uditsathe.github.io)", " | ", "LinkedIn [link](https://in.linkedin.com/in/udit-sathe-b00154214?original_referer=https%3A%2F%2Fwww.google.com%2F)", " | ",
-         "Twitter [link](https://twitter.com/SatheUdit)", " | ", "Instagram [link](https://www.instagram.com/uditsathe/)")
+st.write("GitHub [link](https://github.com/uditsathe/uditsathe.github.io)", " | ", "LinkedIn [link](https://in.linkedin.com/in/udit-sathe-b00154214?original_referer=https%3A%2F%2Fwww.google.com%2F)")
 
