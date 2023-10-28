@@ -27,8 +27,7 @@ while True:
         # st.subheader("Entered Ticker value is invalid.  Try again...")
         #---------------------------------------------------------------
         #REMOVE THE FOLLOWING LINES WHEN API IS BACK UP 
-        st.subheader("Yfinance API used here is currently down. To see the project visit: ")
-        st.subheader("GitHub [link](https://github.com/uditsathe/LSTM-Stock-Price-Prediction-WEB-App-with-Streamlit-Stocksee/tree/main)")
+        st.subheader("Yfinance API used here is currently down. To see the project visit: GitHub [link](https://github.com/uditsathe/LSTM-Stock-Price-Prediction-WEB-App-with-Streamlit-Stocksee/tree/main)")
         #---------------------------------------------------------------
         quit()
 # tickName = yf.Ticker(Ticker)
