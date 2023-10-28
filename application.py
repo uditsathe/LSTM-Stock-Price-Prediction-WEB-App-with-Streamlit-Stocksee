@@ -23,7 +23,13 @@ while True:
         company = frame.info['shortName']
         break
     except:
-        st.subheader("Entered Ticker value is invalid.  Try again...")
+        #UNMARK  THE FOLLOWING LINE WHEN API IS BACK UP
+        # st.subheader("Entered Ticker value is invalid.  Try again...")
+        #---------------------------------------------------------------
+        #REMOVE THE FOLLOWING LINES WHEN API IS BACK UP 
+        st.subheader("Yfinance API used here is currently down. To see the project visit: ")
+        st.subheader("GitHub [link](https://github.com/uditsathe/uditsathe.github.io)")
+        #---------------------------------------------------------------
         quit()
 # tickName = yf.Ticker(Ticker)
 currency=frame.info['currency']
